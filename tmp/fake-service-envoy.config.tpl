@@ -1,0 +1,1 @@
+CONSUL_HTTP_ADDR=localhost:8500

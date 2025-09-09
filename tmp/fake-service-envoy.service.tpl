@@ -1,0 +1,15 @@
+[Unit]
+Description=Start envoy proxy for ${service_name}
+Requires=fake-service.service
+After=fake-service.service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/consul connect envoy --sidecar-for ${service_name} -admin-bind localhost:19000
+EnvironmentFile=/opt/myapp/fake-service-envoy.config
+User=ubuntu
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target

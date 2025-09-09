@@ -1,0 +1,2 @@
+CONSUL_HTTP_ADDR=${client_ip}:8500
+CONSUL_GRPC_ADDR=${client_ip}:8502

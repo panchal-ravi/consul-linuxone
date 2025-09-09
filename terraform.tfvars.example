@@ -1,0 +1,21 @@
+# Copy this file to terraform.tfvars and update with your actual values
+onsul_server_ip   = "10.3.26.11"
+consul_client_1_ip = "10.3.26.12"
+consul_client_2_ip = "10.3.26.13"
+consul_client_3_ip = "10.3.26.2"
+consul_client_4_ip = "10.3.26.14"
+
+# SSH credentials for x86_64 VMs
+ssh_username = "your_username"
+ssh_password = "your_password"
+
+# SSH credentials for s390x VM (if different)
+ssh_username_s390x = "your_s390x_username"  
+ssh_password_s390x = "your_s390x_password"
+
+# Optional: Consul Enterprise license
+consul_license = "your_consul_enterprise_license_key"
+
+# Optional: Version overrides
+consul_version = "1.21.4+ent"
+envoy_version  = "1.33.2"
